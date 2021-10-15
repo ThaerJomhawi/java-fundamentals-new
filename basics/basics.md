@@ -1,5 +1,5 @@
-1. Basics.
-Lab 01:Java Primitives and Control Flow
+ ## Basics.
+**Lab 01:Java Primitives and Control Flow**
 
 methods:
 
