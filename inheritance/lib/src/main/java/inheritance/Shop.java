@@ -16,4 +16,20 @@ public class Shop {
         this.priceRate = price;
         this.reviews = new ArrayList<Review>();
     }
+
+    @Override
+    public String toString() {
+        return "Shop Name: "+this.name+" with rate: "+this.rate+" and price category: "+this.priceRate;
+    }
+
+    void addReview(Review review){
+        this.reviews.add(review);
+        int s = 0;
+        for(Review r:this.reviews){
+            s += r.stars;
+        }
+        this.rate = s/this.reviews.size();
+    }
+
+
 }

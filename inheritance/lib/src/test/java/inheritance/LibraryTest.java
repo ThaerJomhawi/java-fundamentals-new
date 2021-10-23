@@ -29,4 +29,17 @@ class LibraryTest {
         String resultTest="Restaurant Name: Thaer Restaurant with rate: 1 and price category: $$$";
         assertEquals(resultTest,newInstanceRestaurant1.toString());
     }
+
+    @Test public void testShop(){
+        Shop newInstanceShop1=new Shop("Thaer Shop",5,"$");
+        String resultTest="Shop Name: Thaer Shop with rate: 5 and price category: $";
+        assertEquals(resultTest,newInstanceShop1.toString());
+    }
+
+    @Test public void testTheater(){
+        Theater newInstanceTheater1=new Theater("Thaer Theater",8);
+        String resultTest="Shop Name: Thaer Theater with rate: 8 and price category: $$";
+        assertEquals(resultTest,newInstanceTheater1.toString());
+    }
+
 }

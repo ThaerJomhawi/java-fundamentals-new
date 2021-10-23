@@ -7,22 +7,35 @@ public class Theater {
 
     String name;
     int rate;
-    String nowMovie;
+    List<String> movies;
     private List<Review> reviews;
 
-    Theater (String name, int rate, String movie){
+    Theater (String name, int rate){
         this.name = name;
         this.rate = rate;
-        this.nowMovie = movie;
+        this.movies = new ArrayList<String>();
         this.reviews = new ArrayList<Review>();
     }
 
-
-    public void addMovie(String movieName) {
-
+    @Override
+    public String toString() {
+        return "Theater Name: "+this.name+" with rate: "+this.rate;
     }
 
-    public void removeMovie(String movieName) {
+    public void addMovie(String movie) {
+        this.movies.add(movie);
+    }
 
+    public void removeMovie(String movie) {
+        this.movies.remove(movie);
+    }
+
+    void addReview(Review review){
+        this.reviews.add(review);
+        int s = 0;
+        for(Review r:this.reviews){
+            s += r.stars;
+        }
+        this.rate = s/this.reviews.size();
     }
 }
